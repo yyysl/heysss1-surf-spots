@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  text-align: left;
+}
+
+/* 自定义样式 */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Leaflet 地图样式修复 */
+.leaflet-container {
+  border-radius: 0.5rem;
+}
+
+/* 自定义标记样式 */
+.custom-surf-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.custom-detail-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Leaflet 弹出框样式 */
+.leaflet-popup-content-wrapper {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.leaflet-popup-tip {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .leaflet-control-zoom {
+    margin-left: 10px !important;
+    margin-top: 10px !important;
+  }
+}

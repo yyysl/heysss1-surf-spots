@@ -1,0 +1,21 @@
+{
+  "name": "surf-spots-world",
+  "version": "1.0.0",
+  "description": "全球冲浪点信息收集网站",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "build:pages": "cd client && npm install && npm run build",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "deploy": "wrangler pages deploy client/build"
+  },
+  "keywords": ["surfing", "surf-spots", "travel", "waves"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
